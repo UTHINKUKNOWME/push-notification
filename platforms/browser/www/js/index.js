@@ -17,8 +17,33 @@
  * under the License.
  */
 var app = {
+	
+
+
+
+//document.addEventListener('deviceready', function () {
+//  // Enable to debug issues.
+//  // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+//  
+//  var notificationOpenedCallback = function(jsonData) {
+//    console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+//  };
+//
+//  window.plugins.OneSignal
+//    .startInit("c0f477b0-28af-40e2-95ae-8a1a0c5e15da")
+//    .handleNotificationOpened(notificationOpenedCallback)
+//    .endInit();
+//  
+//  // Call syncHashedEmail anywhere in your app if you have the user's email.
+//  // This improves the effectiveness of OneSignal's "best-time" notification scheduling feature.
+//  // window.plugins.OneSignal.syncHashedEmail(userEmail);
+//}, false);
+	
+	
+	
     // Application Constructor
     initialize: function() {
+		
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -33,6 +58,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+		
         console.log('Received Device Ready Event');
         console.log('calling setup push');
         app.setupPush();
@@ -41,9 +67,11 @@ var app = {
         console.log('calling push init');
         var push = PushNotification.init({
             "android": {
-                "senderID": "XXXXXXXX"
+                "senderID": "138464916075"
             },
-            "browser": {},
+            "browser": {
+				pushServiceURL: 'http://push.api.phonegap.com/v1/push'
+					   },
             "ios": {
                 "sound": true,
                 "vibration": true,

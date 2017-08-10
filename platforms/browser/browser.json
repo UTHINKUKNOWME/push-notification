@@ -22,6 +22,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "onesignal-cordova-plugin": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {},
@@ -73,6 +76,14 @@
             "merges": [
                 "navigator.notification"
             ]
+        },
+        {
+            "file": "plugins/onesignal-cordova-plugin/www/OneSignal.js",
+            "id": "onesignal-cordova-plugin.OneSignal",
+            "pluginId": "onesignal-cordova-plugin",
+            "clobbers": [
+                "OneSignal"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -80,6 +91,7 @@
         "phonegap-plugin-push": "1.8.4",
         "cordova-plugin-console": "1.0.7",
         "cordova-plugin-dialogs": "1.2.1",
-        "cordova-plugin-whitelist": "1.2.2"
+        "cordova-plugin-whitelist": "1.2.2",
+        "onesignal-cordova-plugin": "2.1.2"
     }
 }
